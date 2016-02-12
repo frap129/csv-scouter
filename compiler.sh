@@ -23,6 +23,7 @@ oerformula="placeholder"
 # Create prereqs
 echo "$infile" > tmp.csv
 rm -rf Teams && mkdir Teams
+cp csv-xlsx.py Teams/
 
 # Create team stat files
 for num in teamnums; do
@@ -32,5 +33,8 @@ for num in teamnums; do
   echo $oerformula > Teams/${num}.csv
 done;
 
+# Convert CSV files to xlsx files to use formulas
+python Teams/csv-xlsx.py
+
 # Clean up.
-rm -f tmp.csv
+rm -f tmp.csv Teams/csv-xlsx.py

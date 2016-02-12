@@ -29,7 +29,7 @@ for num in teamnums; do
   echo $teamstatheader Teams/${num}.csv
   grep "${num}" tmp.csv | cut "-d " -f2- >> Teams/${num}.csv
   sed -i 's/*, ${num}//g' Teams/${num}.csv
-  echo $oerformula > Teams/${num}.csvm
+  echo $oerformula > Teams/${num}.csv
 done;
 
 # Clean up.

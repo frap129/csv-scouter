@@ -17,8 +17,8 @@
 # Define variables
 infile="$(cat $1)"
 teamnums="placeholder, placeholder1, placeholder2,"
-teamstatheader="place, holder, csv, values"
-oerformula="placeholder"
+teamstatheader="place, holder, csv, values,"
+oerformula="OER=, =placeholder,"
 
 # Create prereqs
 echo "$infile" > tmp.csv

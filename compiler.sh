@@ -16,15 +16,21 @@
 
 # Define variables
 infile="$(cat $1)"
-outfile="$2"
 teamnums="placeholder, placeholder1, placeholder2,"
+teamstatheader="place, holder, csv, values"
+oerformula="placeholder"
 
-# Create outfile
-touch $outfile
+# Create prereqs
+echo "$infile" > tmp.csv
+rm -rf Teams && mkdir Teams
 
-# Move team numbers to outfile
-for nums in teamnums; do
-  echo $num >> $outfile;
+# Create team stat files
+for num in teamnums; do
+  echo $teamstatheader Teams/${num}.csv
+  grep "${num}" tmp.csv | cut "-d " -f2- >> Teams/${num}.csv
+  sed -i 's/*, ${num}//g' Teams/${num}.csv
+  echo $oerformula > Teams/${num}.csvm
 done;
 
-# Combine Stats
+# Clean up.
+rm -f tmp.csv

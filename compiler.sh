@@ -16,7 +16,7 @@
 
 # Define variables
 infile="$(cat $1)"
-teamnums="placeholder, placeholder1, placeholder2,"
+teamnums="33, 51, 67, 201, 245, 308, 313, 1023, 1189, 1250, 1718, 2075, 2137, 2676, 3098, 3302, 3655, 3667, 3773, 4003, 4737, 4779, 4810, 5048, 5066, 5090, 5166, 5193, 5263, 5282, 5436, 5467, 5650, 5662, 5688, 5708, 5711, 5860, 6117, 6152,"
 teamstatheader="place, holder, csv, values,"
 oerformula="OER=, =placeholder,"
 
